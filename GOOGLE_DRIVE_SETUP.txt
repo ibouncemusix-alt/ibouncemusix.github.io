@@ -1,0 +1,10 @@
+iBOUNCE MUSIX — Google Drive setup for GitHub Pages
+
+1. Google Cloud Console > Google Auth Platform > Clients: use a Web application OAuth client.
+2. Add https://ibouncemusix.com under Authorized JavaScript origins. Add https://www.ibouncemusix.com and https://ibouncemusix.github.io only if used.
+3. Enable Google Drive API for this project. Configure OAuth audience/test users and drive.file scope.
+4. Edit cloud-config.js: replace REPLACE_WITH_GOOGLE_WEB_CLIENT_ID with your actual Web Client ID (ends in .apps.googleusercontent.com). Do NOT use or publish the client secret.
+5. Upload CONTENTS of this folder to the root of your GitHub Pages repository (not the enclosing folder). Commit and wait for deployment.
+6. Open https://ibouncemusix.com/cloud-backup.html, press Connect Google Drive, authorize, then try a small audio file upload and restore.
+
+This implementation only backs up files selected in the website browser. It does not automatically read or synchronize the Android app library. No OAuth client ID was provided in the uploaded ZIP, so live sign-in has not been tested.
